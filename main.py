@@ -1,3 +1,13 @@
+import random
+
+def create_cards(num_req):
+    numbers = []
+    while len(numbers) < num_req:
+        num = random.randint(1, 90)
+        if num not in numbers:
+            numbers.append(num)
+    return sorted(numbers)
+
 #number of simulations
 run_count = 5000
 #tracker for count of games going down to last three numbers
